@@ -1,15 +1,17 @@
-# jsclub-django
-## Step 1: Install virtual environment (virtualenv)
+
+# First-time installation
+PLEASE check out ALL the steps below upon setting up your runtime for the first time
+## Step 1: Install virtual environment (virtualenv) if you haven't done so
 ```
 pip3 install virtualenv
 ```
-## Step 2: Create a virtual environment for our project
+### Step 1.1: Create a virtual environment for our project
 Place the virtual environment folder right next to our project folder.
 ```
 cd ..
 virtualenv myvenv
 ```
-## Step 3: Activate the virtual environment
+### Step 1.2: Activate the virtual environment
 For Mac:
 ```
 source myvenv/bin/activate
@@ -23,12 +25,12 @@ If you're using Git Bash on Window:
 source myvenv/Scripts/activate
 ```
 Make sure you see (myvenv).
-## Step 4: Install the require plugin
+## Step 2: Install required plugins
 ```
-cd jsclub-django
+cd jseclub
 pip install -r requirements.txt
 ```
-## Step 5: Running the server
+## Step 3: Run the server
 ```
 python manage.py runserver
 ```
