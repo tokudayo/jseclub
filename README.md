@@ -35,6 +35,9 @@ pip install -r requirements.txt
 python manage.py runserver
 ```
 ### Start developing!
+**Notes:** 
+  To test the project locally, make sure to switch ```DATABASES``` in jsclub/settings.py
+  Commit changed files (except settings.py) only
 
 ### Development Process
 I presumely that everything has been set up properly, during the development, when comes to my phase, I have installed several a package named Popper, the description for installion can already be found here, install this package manager with the commands:
