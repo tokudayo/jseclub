@@ -1,0 +1,1 @@
+web: gunicorn jsclub.wsgi --log-file -

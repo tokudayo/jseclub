@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}JS Club{% endblock %}
+
+{% block breadcrumb %}
+{% endblock %}
+
+{% block content %}
+    <style>
+        .container{
+            text-align: center;
+            justify-content: center;
+            padding: 10%;
+            width: 100vw;
+        }
+    </style>
+    <div class="container">
+  <div class="alert alert-success" role="alert">
+    <strong>Success!</strong> Your information has been updated successfully!
+  </div>
+  <a href="{% url 'view_profile' %}" class="btn btn-secondary">Return to your profile</a>
+    </div>
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block title %}My account{% endblock %}
+
+{% block breadcrumb %}
+{% endblock %}
+
+{% block content %}
+    <style>
+    form{
+        display: inline-block;
+        margin: 5%;
+        width: 60vw;
+    }
+    </style>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 col-md-8 col-sm-10">
+          <ol class="breadcrumb my-4">
+  <li class="breadcrumb-item active align-items-center">Update your information</li>
+</ol>
+        <form method="post" novalidate>
+          {% csrf_token %}
+          {% include 'includes/form.html' %}
+          <button type="submit" class="btn btn-success">Save changes</button>
+        </form>
+      </div>
+    </div>
+  </div>
+{% endblock %}

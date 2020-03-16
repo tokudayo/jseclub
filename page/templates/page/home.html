@@ -1,0 +1,172 @@
+{% extends 'base.html' %}
+{% load static %}
+{%  block stylesheet %}
+<link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Pacifico|Patrick+Hand&display=swap" rel="stylesheet">
+<style>
+body,html{
+    height: 100%;
+    margin: 0;
+    font-size: 100%;
+    font-family: 'Segoe UI Light', sans-serif;
+}
+
+img{
+  border-radius: 10px 10px;
+}
+
+header{
+  padding: 0;
+}
+.featurette-heading {
+    font-family: 'Segoe UI Light';
+    font-weight: 800;
+    font-size: 45px;
+    line-height: 1;
+    letter-spacing: -.05rem;
+}
+
+.featurette-divider {
+  margin: 3rem 0; /* Space out the Bootstrap <hr> more */
+}
+
+.hero-image {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url("https://i.imgur.com/N06dosu.png");
+      min-height: 53vh;
+      margin-bottom: 100px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center; 
+    }
+
+.hero-text {
+  font-family: "Patrick Hand";
+  font-size: 5vw;
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+  color: white;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.text-muted{
+    color: DarkRed;
+}
+
+</style>
+
+{% endblock %}
+
+  {% block content %}
+
+  <div class="hero-image"> 
+    <div class="hero-text">
+      Japanese Software Engineering Club
+    </div>
+  </div>
+
+  <div class="container marketing">
+
+    <!-- START THE FEATURETTES -->
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading">Lịch sử thành lập <span style="color:#C33232;">JS Club</span></h2>
+        <br>
+        <p class="lead">Được thành lập vào tháng 2/2014, cái tên JS được đặt theo một chuyên ngành hẹp của ngành Kỹ thuật phần mềm tại ĐH FPT. Từ những ngày đầu thành lập, JS mang sứ mạng trở thành một cộng đồng kết nối các sinh viên theo chuyên ngành hẹp JS. <br>
+        Sau này, câu lạc bộ được mở rộng, trở thành nơi chia sẻ kiến thức của các sinh viên YÊU THÍCH TIẾNG NHẬT và ĐAM MÊ LẬP TRÌNH.</p>
+      </div>
+      <div class="col-md-5">
+        <img src="https://scontent.fhan3-3.fna.fbcdn.net/v/t1.0-9/74236333_2578177505630083_7717716924200648704_o.jpg?_nc_cat=101&_nc_sid=8024bb&_nc_ohc=PVN22crT_vAAX8k6Muj&_nc_ht=scontent.fhan3-3.fna&oh=5704ae0b0811767e47b9ffcc3db7d339&oe=5E946081" style="width:100%">
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7 order-md-2">
+        <h2 class="featurette-heading">“JS Club - Ichigo ichie”:<span style="color:#C33232;"> JS Club - Nhất kì nhất hội</span></h2>
+        <br>
+        <p class="lead">Con người chúng ta chỉ gặp nhau duy nhất một lần trong đời, nên phải biết trân trọng nhau. JS Club là nơi bạn muốn dành những ngày tháng thanh xuân tiếp theo để thấy cuộc sống không nhàm chán.</p>
+      </div>
+      <div class="col-md-5 order-md-1">
+        <img src="https://scontent.fhan4-1.fna.fbcdn.net/v/t1.0-9/55901770_2166319633482541_2063803962653409280_o.jpg?_nc_cat=105&_nc_sid=e007fa&_nc_ohc=BkVQF-kaLdcAX_-uhJf&_nc_ht=scontent.fhan4-1.fna&oh=69784df3b79d0331bb0c0539acc0117f&oe=5E989272" style="width:100%">
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading">Thành tích <span style="color:#C33232;">KHỦNG</span></h2>
+        <br>
+        <p class="lead">JS Club là câu lạc bộ duy nhất với 7 lần liên tiếp đạt danh hiệu Câu lạc bộ Xuất sắc. <br>Chúng mình có biệt danh là "Câu lạc bộ Cóc Vàng". Thành viên CLB có quyền tham gia rất nhiều hoạt động, sự kiện liên quan đến Code, văn hóa Nhật Bản và nhiều điều thú vị nữa.</p>
+      </div>
+      <div class="col-md-5">
+        <img src="https://scontent.fhan3-3.fna.fbcdn.net/v/t1.0-9/55949873_2166320233482481_3267992237014777856_o.jpg?_nc_cat=100&_nc_sid=e007fa&_nc_ohc=hQoa2oOi-4EAX_zC2k6&_nc_ht=scontent.fhan3-3.fna&oh=d5f983d4d2b62c8c959f0478bee15a47&oe=5E90FCAE" style="width:100%">
+      </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <!-- /END THE FEATURETTES -->
+
+  </div><!-- /.container -->
+
+<!--<div class="container">
+    <div class="content">
+        <div class="main">
+            <div class="image">
+                <img src="{% static 'media/11896289_839687309479120_2231876077194462789_o.png' %}">
+            </div>
+            <h1>Our story</h1>
+            <div class="icon">
+                <img src="{% static 'media/12022330_845928092188375_8890160160420757664_o.png' %}"/>
+            </div>
+            <div class="name">
+                <span>JS CLUB - JAPANESE SOFTWARE ENGINEERS</span>
+            </div>
+            <br>
+            JS Club là tên viết tắt của Japanese Software Engineers Club – Câu lạc bộ Kỹ sư phần mềm Nhật Bản.
+            Được thành lập vào tháng 2/2014, cái tên JS được đặt theo một chuyên ngành hẹp của ngành Kỹ thuật phần mềm tại ĐH FPT.
+            Từ những ngày đầu thành lập, JS mang sứ mạng trở thành một cộng đồng kết nối các sinh viên theo chuyên ngành hẹp JS. Sau này, câu lạc bộ được mở rộng, trở thành nơi chia sẻ kiến thức của các sinh viên YÊU THÍCH TIẾNG NHẬT và ĐAM MÊ LẬP TRÌNH.
+            Chúng tôi tự hào về những gì chúng tôi đã, đang cố gắng để trở nên tốt đẹp hơn.
+            Chúng tôi tự hào về con người JS
+            <h1>“JS Club - Ichigo ichie” (JS Club - Nhất kì nhất hội)</h1>
+            Con người chúng ta chỉ gặp nhau duy nhất một lần trong đời, nên phải biết trân trọng nhau.
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>-->
+</div>
+
+
+<script>
+  window.onscroll = function() {myFunction()};
+
+  var header = document.getElementById("navbar");
+  var sticky = header.offsetTop;
+
+  function myFunction() {
+    if (window.pageYOffset > sticky) {
+      header.classList.add("sticky");
+    } else {
+      header.classList.remove("sticky");
+    }
+}
+</script>
+{% endblock %}

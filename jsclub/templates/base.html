@@ -1,0 +1,118 @@
+{% load static %}
+<!DOCTYPE html>
+  <head>
+    <meta charset="utf-8">
+    <title>{% block title %}Home{% endblock %} | JS Club</title>
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="icon" href="https://i.ibb.co/7rTmq3J/icon.png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+    <style>
+    body,html{
+      background-color:#f2f2f2;
+      font-family: "Comfortaa", "Segoe UI";
+    }
+    .navbar, .sticky-top, .navbar-expand-sm, .navbar-dark{
+      position: fixed;
+      top: 0;
+      width: 100%;
+    }
+    .contents {
+    min-height: calc(100vh - 70px - 7.3vh);
+    margin: 0;
+    width: 100%;
+    }
+      footer{
+        margin-top:auto;
+        margin-bottom: 0;
+        height: 70px;
+        background-color: #C33232;
+      }
+      footer p{
+        margin: 0;
+        text-align: center;
+        color: white;
+        font-family: "Segoe UI Light", Arial;
+        padding-top: 3vh;
+      }
+    </style>
+    {% block stylesheet %}{% endblock %}
+  </head>
+  
+<body>
+  {% block body %}
+  {% block topnavbar %}
+  {% endblock %}
+<header>
+<nav id="navbar" class="navbar sticky-top navbar-expand-sm navbar-dark" style="background-color:#C33232; height: 7.3vh; font-family: Comfortaa"> 
+    <a class="navbar-brand" href="{% url 'home' %}">JS Club</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainMenu" aria-controls="mainMenu" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="mainMenu">
+      <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'homeconfession' %}">Confessions</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'homeevent' %}">Events</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'hometraining' %}">Training</a>
+      </li>
+      </ul>
+      {% if user.is_authenticated %}
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="userMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:#ffffff">
+              {{ user.username }}
+            </a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userMenu">
+              <a class="dropdown-item" href="{% url 'view_profile'%}">My account</a>
+              <a class="dropdown-item" href="{% url 'change_password'%}">Change password</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="{% url 'logout' %}">Log out</a>
+            </div>
+          </li>
+        </ul>
+      {% else %}
+        <form class="form-inline ml-auto">
+          <a href="{% url 'login' %}" class="btn btn-outline-light" style="">Log in</a>
+          <a href="{% url 'signup' %}" class="btn btn-dark ml-2 my-sm-0" style="color:#ffffff">Sign up</a>
+        </form>
+      {% endif %}
+    </div>
+</nav>
+<div style="min-height:7.3vh">
+  <img src="{%static 'favicon.jpg'%}" alt=" ">
+ </div>
+</header>
+
+    {% block breadcrumb %}
+
+    {% endblock %}
+
+    {% block hero%}
+    {%endblock%}
+<div class="contents">
+
+    {% block content %}
+
+    {% endblock %}
+</div>
+
+<footer>
+  <p>Copyright 2020 JS Club</p>      
+</footer>
+
+{% endblock body %}
+
+  </body>
+</html>

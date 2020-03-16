@@ -1,0 +1,54 @@
+{% extends 'base.html' %} 
+{% block title %} Members {% endblock %}
+{% block content %}
+<style>
+
+/** Need to improve the styling */
+    .container {
+        display: inline-block;
+        width: 20%;
+        margin: auto;
+    }
+    
+    .username ul {
+        list-style-type: none;
+    }
+    
+    .username ul li:before {
+        content: '🦄';
+        margin: 0 5px 0 -15px;
+        color: #FFF;
+        padding: 5%;
+    }
+</style>
+<h2>Members on JS Club Website</h2>
+<div class="member">
+    <div class="container username">
+        <h4>Username</h4>
+        <ul>
+            {% for user in members %}
+            <li class="user">{{ user.username }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+    <div class="container">
+        <h4>Member's name</h4>
+        <ul>
+            {% for user in members %}
+            <li class="user">{{ user.account.firstname }} {{ user.account.lastname }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+    <div class="container">
+        <ul>
+            <h4>Active Status</h4>
+            {% for user in members %} {% if user.account.active == True %}
+            <li>Online</li>
+            {% else %}
+            <li>Offline</li>
+            {% endif %} {% endfor %}
+        </ul>
+    </div>
+</div>
+
+{% endblock %}

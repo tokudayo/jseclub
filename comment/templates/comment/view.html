@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+	<a href = {% url 'detailconfession' confessionid %}> Back to confession </a>
+	{% for comment in comments %}
+		<h5> {{comment.author}} </h5>
+		<h6> {{comment.text}} </h6>
+		<h6> {{comment.pub_date}} </h6>
+		<br>
+	{% endfor %}
+
+	<br>
+	<br>
+
+	<a href = {% url 'createcomment' confessionid %} > Add your comment here</a>
+
+{% endblock %}

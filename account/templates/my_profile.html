@@ -1,0 +1,51 @@
+{% extends 'base.html' %} 
+{% block title %} Profile {% endblock %}
+{%block content%}
+<style>
+    /* Need to be add more styling */
+    .container {
+        padding: 20px;
+    }
+    
+    html, body{
+        height: 100%;
+    }
+    
+    a {
+        text-align: center;
+        align-content: center;
+        color: #FFF;
+    }
+    
+    button {
+        background-color: #4CAF50;
+        border: none;
+        color: white;
+        padding: 16px 32px;
+        text-decoration: none;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 10px;
+    }
+</style>
+<div class="container">
+    <h2>Your profile on JS Club</h2>
+    <p>Username: {{ user }}</p>
+    <p>First name: {{ user.account.firstname }}</p>
+    <p>Last name: {{ user.account.lastname }}</p>
+    <p>Email: {{ user.email }}</p>
+    <p>Date of birth: {{ user.account.dob }}</p>
+    <p>Phone: {{ user.account.phone }}</p>
+    <p>Room: {{ user.account.room }}</p>
+    {% if user.account.active == True %}
+    <p>Active Status: Online</p>
+    {% else %}
+    <p>Active Status: Offline</p>
+    {% endif %}
+    <button type="submit"><a href="{% url 'update_profile' %}">Update your information</a></button>
+    <button><a href="{% url 'member' %}">View all members</a></button>
+</div>
+
+
+
+{%endblock%}
