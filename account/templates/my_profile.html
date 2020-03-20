@@ -1,51 +1,66 @@
-{% extends 'base.html' %} 
+{% extends 'base.html' %}
 {% block title %} Profile {% endblock %}
 {%block content%}
 <style>
     /* Need to be add more styling */
     .container {
+        margin: 30px auto;
+    }
+
+    .title {
+        font-size: 30px;
+        color: deeppink;
+        margin-bottom: 20px;
+        font-weight: bold;
+    }
+
+    .content {
+        margin-bottom: 20px;
+    }
+
+    .content span {
+        font-weight: bold;
+    }
+
+    .submit {
+        margin-top: 50px;
+    }
+
+    .submit a{
+        border: 1px solid  #71dd8a;
+        background-color:  #71dd8a;
         padding: 20px;
-    }
-    
-    html, body{
-        height: 100%;
-    }
-    
-    a {
-        text-align: center;
-        align-content: center;
-        color: #FFF;
-    }
-    
-    button {
-        background-color: #4CAF50;
-        border: none;
         color: white;
-        padding: 16px 32px;
         text-decoration: none;
-        margin: 4px 2px;
-        cursor: pointer;
-        border-radius: 10px;
+        border-radius: 8%;
     }
+
+    .submit a:hover{
+        background-color: green;
+    }
+
 </style>
-<div class="container">
-    <h2>Your profile on JS Club</h2>
-    <p>Username: {{ user }}</p>
-    <p>First name: {{ user.account.firstname }}</p>
-    <p>Last name: {{ user.account.lastname }}</p>
-    <p>Email: {{ user.email }}</p>
-    <p>Date of birth: {{ user.account.dob }}</p>
-    <p>Phone: {{ user.account.phone }}</p>
-    <p>Room: {{ user.account.room }}</p>
-    {% if user.account.active == True %}
-    <p>Active Status: Online</p>
-    {% else %}
-    <p>Active Status: Offline</p>
-    {% endif %}
-    <button type="submit"><a href="{% url 'update_profile' %}">Update your information</a></button>
-    <button><a href="{% url 'member' %}">View all members</a></button>
-</div>
 
-
+    <div class="container">
+        <div class="title">Your profile on JS Club</div>
+        <div class="content">
+            <p><span>User name: </span> {{ user }} </p>
+             <p><span>First name: </span> {{ user.account.firstname }}  </p>
+             <p><span>Last name: </span> {{ user.account.lastname }}  </p>
+             <p><span>Email: </span> {{ user.email }} </p>
+             <p><span>Date of birth: </span> {{ user.account.dob }} </p>
+             <p><span>Phone: </span> {{ user.account.phone }} </p>
+             <p><span>Room: </span> {{ user.account.room }} </p>
+            {% if user.account.active == True %}
+                 <p><span>Active: </span> Online </p>
+            {% else %}
+                 <p><span>Active: </span> Offline </p>
+            {% endif %}
+            <div class="submit">
+                <a href="{% url 'update_profile' %}">Update your information</a>
+                <a href="{% url 'member' %}">View all members</a>
+            </div>
+        </div>
+    </div>
 
 {%endblock%}

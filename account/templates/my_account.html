@@ -9,8 +9,22 @@
     <style>
     form{
         display: inline-block;
-        margin: 5%;
-        width: 60vw;
+        width: 400px;
+        box-shadow: 0 1px 4px 0 rgba(0,0,0,.15);
+        padding-left:24px;
+        padding-bottom: 10px;
+        padding-top: 15px;
+        position: relative;
+        border: 1px solid #ccc;
+        left: 45%;
+        padding-right: 10px;
+    }
+    button{
+      position: relative;
+      left: 60%;
+    }
+    .breadcrumb{
+      font-size: 1.7rem;
     }
     </style>
   <div class="container">
@@ -22,7 +36,7 @@
         <form method="post" novalidate>
           {% csrf_token %}
           {% include 'includes/form.html' %}
-          <button type="submit" class="btn btn-success">Save changes</button>
+          <button  type="submit" class="btn btn-success">Save changes</button>
         </form>
       </div>
     </div>
