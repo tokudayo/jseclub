@@ -95,18 +95,11 @@ DATABASES = {
         'PORT': '5432'
     }
 }
-
+'''
 
 DATABASES = {
     'default': dj_database_url.config(
         default=config('DATABASE_URL')
-    )
-}
-'''
-DATABASE_URL = 'postgres://gsbykuoddnqdtp:bd576c225252ee2eba840e833470c22461db3617e198c6ca79d851702bffc905@ec2-3-229-210-93.compute-1.amazonaws.com:5432/d3sg29fh2o4tha'
-DATABASES = {
-    'default': dj_database_url.config(
-        default='postgres://gsbykuoddnqdtp:bd576c225252ee2eba840e833470c22461db3617e198c6ca79d851702bffc905@ec2-3-229-210-93.compute-1.amazonaws.com:5432/d3sg29fh2o4tha'
     )
 }
 
