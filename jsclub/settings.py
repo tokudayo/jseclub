@@ -85,7 +85,7 @@ WSGI_APPLICATION = 'jsclub.wsgi.application'
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 #ONLY FOR DEVELOPMENT PHASE
 
-'''
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
@@ -104,6 +104,7 @@ DATABASES = {
     )
 }
 
+'''
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
 
